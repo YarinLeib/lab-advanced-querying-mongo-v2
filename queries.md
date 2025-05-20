@@ -15,7 +15,7 @@ employees_.**
 
 <!-- Your Query Goes Here -->
 
-Query: {number_of_employees: {$gt:5000}} Limit: 20 <br>
+Query: {number_of_employees: {$gt:5000}} Sort: {number_of_employees: -1} Limit: 20 <br>
 
 **3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year`
 fields.**
@@ -68,7 +68,7 @@ their `acquisition price` in a descending order. Limit the search to 10 document
 
 <!-- Your Query Goes Here -->
 
-Query: { founded_day: {$lte: 7 } } Sort: {acquisition_price: -1} Limit: 10 <br>
+Query: { founded_day: {$lte: 7 } } Sort: {acquisition.price_amount: -1} Limit: 10 <br>
 
 ## Iteration 3 (Bonus)
 
